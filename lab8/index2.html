@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>CSE 383</title>
+	</head>
+
+	<body>
+		<script language="JavaScript">
+			function validateForm() {
+				let x = document.forms["myForm"]["name"].value;
+				console.log(x);
+				if(x.length < 2) {
+					alert("Please enter a name of atleast 2 characters");
+					return false;
+				}
+
+				let y = document.getElementById("uid").value;
+				let tester = /^[A-Za-z0-9]+$/;
+				console.log(y + " " + tester.test(y) + "\n");
+				if(!tester.test(y)) {
+					alert("Please enter only 1 word for UserID (no spaces)");
+					return false;
+				}
+				
+				let z = document.getElementById("numMobileDevices").value;
+				console.log(z);
+				if (z < 0 || z > 10) {
+					alert("Please enter a number between 1 and 10");
+					return false;
+				}
+
+				let a = document.getElementById("quoteCite").value;
+				console.log(a);
+				let numTest = /[0-9]/;
+				if(numTest.test(a)) {
+					alert("Please enter a quote with no numbers");
+					return false;
+				}
+			}
+		</script>
+		<form name="myForm" action="https://ceclnx01.cec.miamioh.edu/~johnsok9/cse383/lab8/lab8.php" method="post" target="_blank" onsubmit="return validateForm()">
+			<label for="name">Name:</label><br>
+			<input type="text" id="name" name="name"><br><br>
+			<label for="uid">UserID:</label><br>
+			<input type="text" id="uid" name="uid"><br><br>
+			<label for="numMobileDevices">Number of mobile devices:</label><br>
+			<input type="number" id="numMobileDevices" name="numMobileDevices"><br><br>
+			<label for="quoteCite">Quote:</label><br>
+			<input type="text" id="quoteCite" name="quoteCite"><br><br>
+			<input type="submit" value="Submit">
+		</form>
+	</body>
+</html>
+
