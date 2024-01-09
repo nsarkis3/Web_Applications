@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>CSE 383</title>
+</head>
+
+<body>
+    <script language="JavaScript">
+
+        function doCanvas() {
+            var canvas = document.getElementById('can');
+            if (canvas.getContext) {
+                var ctx = canvas.getContext('2d');
+                ctx.fillStyle = 'rgb(0, 0, 255)';
+                
+		var xCoord;
+                var yCoord;
+                
+		var triangleSize;
+                var triangleSave;
+                
+		for (var i = 1; i < 11; i++) {
+                    xCoord = i * 100 - Math.floor(Math.random() * 10);
+		    yCoord = Math.floor(Math.random() * 400);
+                    ctx.fillStyle = "rgb(" + Math.floor(Math.random() * 255) + ", "  + Math.floor(Math.random() * 255) + ", " + Math.floor(Math.random() * 255) + ")";		                        
+
+		    ctx.beginPath();
+		    ctx.moveTo(xCoord, yCoord);
+                    
+		    triangleSize = Math.random() + 1;
+                    triangleSave = xCoord + 50*triangleSize;
+                    
+		    ctx.lineTo(triangleSave, yCoord + 20*triangleSize);
+                    ctx.lineTo(triangleSave, yCoord + 40*triangleSize);
+
+		    ctx.fill();
+                }
+            }
+        }
+
+        document.write("<h3>Nic Sarkis</h3><br>HW3<br>");
+        document.write("<canvas id='can' width='1000' height='500'></canvas>")
+        doCanvas();
+    </script>
+</body>
+
+</html>

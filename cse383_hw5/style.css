@@ -1,0 +1,10 @@
+header {
+	text-align: center;
+}
+
+div {
+	background-color: cyan;
+	text-align: center;
+}
+
+<div class="col-123">.col-123 .offset-md-3</div>

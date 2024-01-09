@@ -1,0 +1,70 @@
+body{
+    padding: 125px;
+
+}
+.navbar-toggler {
+    background-color: blue;
+}
+.navbar-toggler-icon {
+    color: white;
+}
+
+#HomeImg {
+    align-self: center;
+}
+
+.col-centered{
+    margin: 0 auto;
+    float: none;
+}
+
+.card h3{
+    color: white;
+}
+
+.card h4{
+    color: white;
+    text-align: center;
+}
+.card {
+    border: solid;
+    border-color: darkgrey;
+}
+
+.card li{
+    border: solid;
+    border-color: darkgrey;
+    background-color: #0d6efd;
+    color: white;
+    font-size: 30px;
+}
+
+.card card-img{
+    border: solid;
+    border-color: darkgrey;
+}
+
+.card h5 {
+    text-align: center;
+    color: white;
+    padding-bottom: 30px;
+}
+
+.card {
+    background-color: #0d6efd;
+}
+
+#weatherCards {
+    display: none;
+    margin: auto;
+    width: 75%;
+    padding: 20px;
+}
+
+footer {
+	width:100%;
+	left: 0;
+	bottom:0;
+	position: absolute;
+	height: 100px;
+}
