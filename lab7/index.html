@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+        <head>
+                <meta charset="utf-8">
+                <title>CSE 383</title>
+        </head>
+
+        <body>
+                <script language="JavaScript">
+			 function doRectangle(){
+				for(let i=0; i<3;i++){
+                                	document.write("<div id='photo'><img src='https://picsum.photos/100/150?" + i + "'' alt='photo1'></div>" );
+                                }
+			 }
+
+			function doTime(){
+				const date = new Date();
+				const day  = date.toDateString();
+				const time = date.toLocaleTimeString();
+				alert(day + "\n" +  time);
+			}
+
+			function doCanvas(){
+				var canvas = document.getElementById('rectangle');
+				if(canvas.getContext){
+					var ctx = canvas.getContext('2d');
+					ctx.fillStyle = 'rgb(0,0,255)';
+					ctx.fillRect(50,30,100,100);
+				}
+			}
+                </script>
+
+		<h1>Lab 7</h1>
+		<h2>Nicolas Sarkis</h2>
+		<h3>October 13, 2022</h3>
+
+		<button type="button" onClick="doRectangle();">Rectangle</button>
+		<button type="button" onClick="doTime();">Time</button>&nbsp;
+		<button type="button" onClick="doCanvas();">Blue Square</button>
+		<canvas id="rectangle" width="300" height="300"></canvas>
+
+        </body>
+</html>
