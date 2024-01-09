@@ -1,0 +1,26 @@
+h1 {text-align: center;}
+
+#Landing{
+	border-style: solid;
+	border-width: 5px;
+	border-color: blue;
+	margin: 5px;
+}
+
+#Weather{
+        border-style: solid;
+        border-width: 5px;
+        border-color: blue;
+	margin: 5px;
+}
+
+#History{
+        border-style: solid;
+        border-width: 5px;
+        border-color: blue;
+	margin: 5px;
+}
+
+
+
+
